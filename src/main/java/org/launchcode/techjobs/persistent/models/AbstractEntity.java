@@ -1,12 +1,18 @@
 package org.launchcode.techjobs.persistent.models;
 
+import org.gradle.api.tasks.InputDirectory;
+
 import java.util.Objects;
 
-
+@MappedSuperclass
 public abstract class AbstractEntity {
 
+    @Id
+    @GeneratedValue
     private int id;
 
+    @NotBlank
+    @Size(min = 1, max = 75)
     private String name;
 
     public int getId() {
