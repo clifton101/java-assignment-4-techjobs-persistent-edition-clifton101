@@ -19,13 +19,13 @@ public class EmployerController {
     @Autowired
     private EmployerRepository employerRepository;
 
-    @RequestMapping("")
+    @GetMapping("")
     public String index(Model model) {
         model.addAttribute("employers", employerRepository.findAll());
         return "employers/index";
     }
 
-    @GetMapping("add")
+    @RequestMapping("add")
     public String displayAddEmployerForm(Model model) {
         model.addAttribute(new Employer());
         return "employers/add";
