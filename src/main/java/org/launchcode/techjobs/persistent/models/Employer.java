@@ -1,5 +1,7 @@
 package org.launchcode.techjobs.persistent.models;
 
+import javax.persistence.Entity;
+
 @Entity
 public class Employer extends AbstractEntity {
 
@@ -16,7 +18,8 @@ public class Employer extends AbstractEntity {
     public Employer () {
 
     }
-    public Employer(String Location);
-    this.location = location;
+    public Employer(String Location) {
+        this.location = location;
+    }
 
 }
